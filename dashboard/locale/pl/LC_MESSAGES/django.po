@@ -70,7 +70,7 @@ msgstr "opis odnośnika"
 #: templates/dashboard.html:51 templates/dashboard.html.py:78
 #: templates/dashboard.html:105
 msgid "Go to the application.."
-msgstr "Przejdź do ankiety..""
+msgstr "Przejdź do ankiety.."
 
 #: templates/dashboard.html:67
 msgid "Idea competitions"
