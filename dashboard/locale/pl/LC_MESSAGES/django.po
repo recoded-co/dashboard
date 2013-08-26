@@ -1,0 +1,81 @@
+# Dashboard app Polish locale
+# This file is distributed under the same license as the PACKAGE package.
+# Dariusz Walczak <darek@recoded.co>, 2013.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-03 16:59+0200\n"
+"PO-Revision-Date: 2013-08-03 17:05+0200\n"
+"Last-Translator: Dariusz Walczak <darek@recoded.co>\n"
+"Language-Team: Dariusz WalczakE <darek@recoded.co>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: admin.py:41
+msgid "Advanced options"
+msgstr "Opcje zaawansowane"
+
+#: models.py:19 templates/dashboard.html:40
+msgid "Questionnaires"
+msgstr "Kwestionariusze"
+
+#: models.py:20
+msgid "Plan Proposals"
+msgstr "Propozycja planu"
+
+#: models.py:21
+msgid "Idea Competition"
+msgstr "Porównanie propozycji"
+
+#: models.py:30
+msgid ""
+"This is the link to the project page. The link has to be a full link "
+"starting with http:// or https://"
+msgstr "To jest pełny link do strony projektu. Musi zaczynać się od http:// lub https://"
+
+#: models.py:31
+msgid "Link to project"
+msgstr "Odnośnik do projektu"
+
+#: models.py:33
+msgid ""
+"This is the location of the project that is shown on the dashboard. The area "
+"will be clickable and work as a link that takes the user to the project."
+msgstr "To jest obszar, którego dotyczy projek, ta informacja będzie wyświetlona w panelu. Wskazany obszar po kliknięciu przeniesie użytkownika do powiązanego projektu."
+
+#: models.py:54
+msgid ""
+"This is the link to the project rest endpoint. The link "
+"has                                                 to be a full link "
+"starting with http:// or https:// "
+"and                                                  ending with /active/,"
+"<br /> e.g. http://somehost/somepath/geoforms/active/"
+msgstr "To jest odnośnik do usługi REST. Link musi rozpoczynać się od http:// lub https:// oraz kończyć /active/<br/> np. http://host/ścieżka/geoforms/active/"
+
+#: models.py:57
+msgid "link to project"
+msgstr "Odnośnik do projektu"
+
+#: models.py:59
+msgid "url description"
+msgstr "opis odnośnika"
+
+#: templates/dashboard.html:51 templates/dashboard.html.py:78
+#: templates/dashboard.html:105
+msgid "Go to the application.."
+msgstr "Przejdź do ankiety.."
+
+#: templates/dashboard.html:67
+msgid "Idea competitions"
+msgstr "Konkurs projektów"
+
+#: templates/dashboard.html:94
+msgid "Planning projects"
+msgstr "Projekt planistyczny"
