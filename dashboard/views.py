@@ -48,11 +48,11 @@ def dashboard(request):
         if item in seen: continue
         seen[item] = 1
         cleaned_urls.append(item)
-    print 0
+    
     for url in cleaned_urls:
         if not '/active/' in url[-8:]:
             continue
-        print url 
+         
         resp = urllib2.urlopen(url)
         if resp.getcode() == 200:
             response_dict = json.load(resp)
@@ -68,7 +68,7 @@ def dashboard(request):
 #    PP_projects = Project.on_site.filter(project_type = 'PP').order_by('-pk')
 #    IC_projects = Project.on_site.filter(project_type = 'IC').order_by('-pk')
 #    QU_projects = Project.on_site.filter(project_type = 'QU').order_by('-pk')
-    print QU_projects
+    
 
     return render_to_response('dashboard.html',
                               {'PP_projects': PP_projects,
