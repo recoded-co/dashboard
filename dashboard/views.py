@@ -17,7 +17,7 @@ def dashboard(request):
         org_settings = OrganizationSetting.on_site.all()[0]
     except IndexError:
         org_settings = {}
-        
+    
     QU_projects = []
     PP_projects = []
     IC_projects = []
@@ -41,18 +41,18 @@ def dashboard(request):
     for extra_url in extra_urls:
         urls.append(extra_url.project_url)
     urls.extend(default_urls)
-
+    
     seen = {}
     cleaned_urls = []
     for item in urls:
         if item in seen: continue
         seen[item] = 1
         cleaned_urls.append(item)
-
+    print 0
     for url in cleaned_urls:
         if not '/active/' in url[-8:]:
             continue
-            
+        print url 
         resp = urllib2.urlopen(url)
         if resp.getcode() == 200:
             response_dict = json.load(resp)
@@ -64,11 +64,11 @@ def dashboard(request):
             PP_projects.extend(response_dict['content'])
         elif response_dict['projectType'] == 'ideaCompetitions':
             IC_projects.extend(response_dict['content'])
-        
+    
 #    PP_projects = Project.on_site.filter(project_type = 'PP').order_by('-pk')
 #    IC_projects = Project.on_site.filter(project_type = 'IC').order_by('-pk')
 #    QU_projects = Project.on_site.filter(project_type = 'QU').order_by('-pk')
-    
+    print QU_projects
 
     return render_to_response('dashboard.html',
                               {'PP_projects': PP_projects,

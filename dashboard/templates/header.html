@@ -1,16 +1,21 @@
-			{% load i18n %}
+{% load i18n %}
 {% block header %}
-                        
-                        <div id="header">
-				<div id="languages" class="floatleft">
-				{% ifnotequal LANGUAGE_CODE 'sv' %}
-				    <a class="link floatleft" href="{% url set_language %}?lang=sv">På svenska</a>
-				{% endifnotequal %}
-				{% ifnotequal LANGUAGE_CODE 'fi' %}
-				    <a class="link floatleft" href="{% url set_language %}?lang=fi">Suomeksi</a>
-				{% endifnotequal %}
-				</div>
-				<div id="login" class="floatright">
+	<div id="header">
+		<div id="languages" class="floatleft">
+			{% ifnotequal LANGUAGE_CODE 'sv' %}
+				<a class="link floatleft" href="{% url set_language %}?lang=sv">På svenska</a>
+			{% endifnotequal %}
+			{% ifnotequal LANGUAGE_CODE 'fi' %}
+				<a class="link floatleft" href="{% url set_language %}?lang=fi">Suomeksi</a>
+			{% endifnotequal %}
+			{% ifnotequal LANGUAGE_CODE 'pl' %}
+				<a class="link floatleft" href="{% url set_language %}?lang=pl">Polski</a>
+			{% endifnotequal %}
+			{% ifnotequal LANGUAGE_CODE 'en' %}
+				<a class="link floatleft" href="{% url set_language %}?lang=en">English</a>
+			{% endifnotequal %}
+		</div>
+		<div id="login" class="floatright">
                                         {% comment %}
 					{% if user.is_authenticated %}
 						<div id="auth_user_message">                    
